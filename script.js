@@ -21,7 +21,7 @@ function checkGuess() {
     disableInput();
   } else {
     const resultElement = document.getElementById('result');
-    if (attempts > 5) {
+    if (attempts > 10) {
       resultElement.innerHTML = `Sorry, you've exceeded 10 attempts. The correct number was ${targetNumber}. Game over.`;
       disableInput();
     } else {
