@@ -1,6 +1,5 @@
 let targetNumber, attempts;
 
-
 function startGame() {
   targetNumber = Math.floor(Math.random() * 100) + 1;
   attempts = 0;
@@ -10,7 +9,6 @@ function startGame() {
   document.getElementById('guess').disabled = false;
   document.querySelector('button').disabled = false;
 }
-
 
 startGame();
 
@@ -23,9 +21,14 @@ function checkGuess() {
     disableInput();
   } else {
     const resultElement = document.getElementById('result');
-    resultElement.innerHTML = userGuess > targetNumber
-      ? `Too high! Try again. Attempts: ${attempts}`
-      : `Too low! Try again. Attempts: ${attempts}`;
+    if (attempts > 5) {
+      resultElement.innerHTML = `Sorry, you've exceeded 10 attempts. The correct number was ${targetNumber}. Game over.`;
+      disableInput();
+    } else {
+      resultElement.innerHTML = userGuess > targetNumber
+        ? `Too high! Try again. Attempts: ${attempts}`
+        : `Too low! Try again. Attempts: ${attempts}`;
+    }
   }
 }
 
