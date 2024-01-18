@@ -16,8 +16,9 @@ Guess-the-number-game explanation:
        It adds +1 attempt to the attempts variable, which will be added each time until the guess is right.
         - If statements:
         https://github.com/witzakr/Guess-the-number-game/blob/c6ff31c1ad8ce4d9661f2c315ccab0941684f658/script.js#L21-L29
-          - The first statement is a scenario, where the user guesses the number right and it changes the result value from HTML to the congratulations message. After that it disables the buttons.
-          - The second scenario is when the guess is wrong, it changes the result value to the message that depends on the number guess, either if the number was too high or low
+          - The first statement is a scenario, where the user guesses the number right and it changes the result value from HTML to the congratulations message. After that, it disables the buttons.
+          - The second scenario is where the user exceeds the number of guesses, the statements disable input, print the ending message and the correct number
+          - The third scenario is when the guess is wrong, it changes the result value to the message that depends on the number guess, either if the number was too high or low
   ------------------------------------------
   4. disableInput function
      https://github.com/witzakr/Guess-the-number-game/blob/c6ff31c1ad8ce4d9661f2c315ccab0941684f658/script.js#L32-L35
